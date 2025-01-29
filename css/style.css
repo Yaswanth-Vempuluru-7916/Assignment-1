@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,12 +13,12 @@ header {
 }
 
 nav {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
   gap: 4rem;
 }
 
@@ -45,7 +45,7 @@ nav {
   text-align: center;
 }
 .logo__text--highlight {
-  color: #553d67;
+  color: #553D67;
 }
 
 .nav-links {
@@ -56,7 +56,7 @@ nav {
   gap: 2.5rem;
 }
 .nav-links a {
-  color: #553d67;
+  color: #553D67;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -64,7 +64,7 @@ nav {
   transition: color 0.3s ease;
 }
 .nav-links a:hover {
-  color: #f64c72;
+  color: #F64C72;
 }
 
 .hamburger {
@@ -78,7 +78,7 @@ nav {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #553d67;
+  background-color: #553D67;
   transition: all 0.3s ease;
 }
 
@@ -115,6 +115,9 @@ nav {
   }
 }
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 5rem 2rem;
   background: url("../assets/images/hero_img.webp") no-repeat center center;
@@ -122,10 +125,7 @@ nav {
   color: #fff;
   width: 100%;
   min-height: 583px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -162,11 +162,11 @@ nav {
 }
 
 .about {
-  background: #fff;
-  padding: 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  padding: 40px 0;
   flex-direction: column;
   width: 80%;
   max-width: 900px;
@@ -254,7 +254,7 @@ nav {
 .achievements {
   background-color: #D6284A;
   padding: 80px 0;
-  color: white;
+  color: #fff;
   position: relative;
   z-index: 1;
 }
@@ -395,12 +395,12 @@ nav {
 }
 
 .mission-text {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.25rem;
 }
 
 .mission-button {
@@ -596,13 +596,13 @@ nav {
 }
 
 .nav-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border: 1px solid #ddd;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -626,7 +626,7 @@ nav {
   margin: 0 auto;
 }
 .work-with-us__title {
-  color: #FFFFFF;
+  color: #fff;
   font-size: 2rem;
   font-family: Mulish, sans-serif;
   font-weight: 600;
@@ -634,7 +634,7 @@ nav {
   text-transform: uppercase;
 }
 .work-with-us__description {
-  color: #FFFFFF;
+  color: #fff;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -651,14 +651,14 @@ nav {
 
 .footer {
   padding: 2rem;
-  background-color: #FFFFFF;
+  background-color: #fff;
 }
 .footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .footer__copyright {
   font-size: 0.875rem;
@@ -720,7 +720,7 @@ nav {
   }
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
   }
@@ -762,8 +762,8 @@ nav {
   .hero__email {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 1rem;
   }
   .about__image-container {

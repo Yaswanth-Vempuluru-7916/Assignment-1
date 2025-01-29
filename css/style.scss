@@ -1,24 +1,45 @@
+// Colors
+$color-primary: #D6284A;
+$color-primary-dark: #553D67;
+$color-secondary: #F64C72;
+$color-text-primary: #3A2C4A;
+$color-white: #fff;
+$color-gray-100: #F8F8F8;
+$color-gray-300: #666666;
+$color-gray-400: #495C76B2;
+$color-gray-500: #4A5A6A;
+
+// Typography
+$font-primary: 'Arial', sans-serif;
+$font-secondary: Mulish, sans-serif;
+$font-tertiary: 'Open Sans', sans-serif;
+
+//Mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: $font-primary;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
   header {
-    background: #fff;
-    color: #3A2C4A;
+    background: $color-white;
+    color: $color-text-primary;
     padding: 1rem 2rem;
     border-bottom: 1px solid #ccc;
   }
   
   nav {
+    @include flex-center();
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 4rem;
   }
   
@@ -40,14 +61,14 @@ body {
     }
   
     &__text {
-      font-family: Mulish, sans-serif;
+      font-family: $font-secondary;
       font-size: 18px;
       font-weight: 700;
-      color: #D6284A;
+      color: $color-primary;
       text-align: center;
   
       &--highlight {
-        color: #553d67;
+        color: $color-primary-dark;
       }
     }
   }
@@ -60,7 +81,7 @@ body {
     gap: 2.5rem;
   
     a {
-      color: #553d67;
+      color: $color-primary-dark;
       font-family: 'Open Sans', sans-serif;
       font-size: 18px;
       font-weight: 400;
@@ -68,7 +89,7 @@ body {
       transition: color 0.3s ease;
   
       &:hover {
-        color: #f64c72;
+        color: $color-secondary;
       }
     }
   }
@@ -84,7 +105,7 @@ body {
       display: block;
       width: 30px;
       height: 3px;
-      background-color: #553d67;
+      background-color: $color-primary-dark;
       transition: all 0.3s ease;
     }
   }
@@ -130,17 +151,15 @@ body {
   }
   
   .hero {
+    @include flex-center;
     text-align: center;
     padding: 5rem 2rem;
     background: url("../assets/images/hero_img.webp") no-repeat center center;
     background-size: cover;
-    color: #fff;
+    color: $color-white;
     width: 100%;
     min-height: 583px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
@@ -171,8 +190,8 @@ body {
   
       &-button {
         padding: 0.75rem 1.5rem;
-        background: #D6284A;
-        color: #fff;
+        background: $color-primary;
+        color: $color-white;
         cursor: pointer;
         outline: none;
         border: none;
@@ -182,11 +201,9 @@ body {
   }
   
   .about {
-    background: #fff;
+    @include flex-center;
+    background: $color-white;
     padding: 40px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 80%;
     max-width: 900px;
@@ -200,29 +217,27 @@ body {
       width: 80%;
       max-width: 900px;
       text-align: center;
-      background: #fff;
+      background: $color-white;
       padding: 30px;
     }
   
     &__title {
       font-size: 32px;
       font-weight: 400;
-      color: #553D67;
+      color: $color-primary-dark;
       margin-bottom: 20px;
-      font-family: Mulish, sans-serif;
+      font-family: $font-secondary
     }
   
     &__description {
       font-size: 16px;
-      color: #4A5A6A;
+      color: $color-gray-500;
       line-height: 1.6;
       margin-bottom: 20px;
     }
   
     &__image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       width: 100%;
   
       img {
@@ -234,9 +249,7 @@ body {
   }
   
   .features {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     padding: 40px 0;
     background: transparent;
     position: relative;
@@ -254,7 +267,7 @@ body {
   }
   
   .feature__card {
-    background: #F8F8F8;
+    background: $color-gray-100;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -275,14 +288,14 @@ body {
   
     p {
       font-size: 14px;
-      color: #495C76B2;
+      color: $color-gray-400;
     }
   }
   
   .achievements {
-    background-color: #D6284A;
+    background-color: $color-primary;
     padding: 80px 0;
-    color: white;
+    color: $color-white;
     position: relative;
     z-index: 1;
   
@@ -334,7 +347,7 @@ body {
   
   .what-we-do {
     padding: 80px 0;
-    background-color: #fff;
+    background-color: $color-white;
   
     &__container {
       max-width: 1200px;
@@ -345,7 +358,7 @@ body {
   
   .section-title {
     text-align: center;
-    color: #553D67;
+    color: $color-primary-dark;
     font-weight: 400;
     font-size: 32px;
     margin-bottom: 10px;
@@ -354,7 +367,7 @@ body {
   .underline {
     width: 80px;
     height: 3px;
-    background-color: #F64C72;
+    background-color: $color-secondary;
     margin: 0 auto 50px;
   }
   
@@ -365,7 +378,7 @@ body {
   }
   
   .service-card {
-    background: #fff;
+    background: $color-white;
     padding: 30px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -383,7 +396,7 @@ body {
     }
   
     h3 {
-      color: #553D67;
+      color: $color-primary-dark;
       font-size: 20px;
       font-weight: 400;
       margin-bottom: 15px;
@@ -397,7 +410,7 @@ body {
   }
   
   .mission-section {
-    background-color: #D6284A;
+    background-color: $color-primary;
     color: white;
     width: 100%;
   }
@@ -437,12 +450,10 @@ body {
   }
   
   .mission-text {
+    @include flex-center;
     margin-bottom: 1.5rem;
     line-height: 1.6;
     font-size: 1.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   .mission-button {
@@ -468,7 +479,7 @@ body {
   
     h2 {
       font-size: 32px;
-      color: #553D67;
+      color: $color-primary-dark;
       position: relative;
       padding-bottom: 15px;
       font-weight: 400;
@@ -493,7 +504,7 @@ body {
   }
   
   .team-member {
-    background: #F8F8F8;
+    background: $color-gray-100;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -586,7 +597,7 @@ body {
   }
   
   .testimonial-card {
-    background: #fff;
+    background: $color-white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -651,13 +662,11 @@ body {
   }
   
   .nav-arrow {
+    @include flex-center;
     width: 40px;
     height: 40px;
     border: 1px solid #ddd;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
   
@@ -673,7 +682,7 @@ body {
   }
   
   .work-with-us {
-    background-color: #D6284A;
+    background-color: $color-primary;
     padding: 4rem 2rem;
     text-align: center;
     margin-top: 10%;
@@ -684,16 +693,16 @@ body {
     }
   
     &__title {
-      color: #FFFFFF;
+      color: $color-white;
       font-size: 2rem;
-      font-family: Mulish, sans-serif;
+      font-family: $font-secondary;
       font-weight: 600;
       margin-bottom: 1.5rem;
       text-transform: uppercase;
     }
   
     &__description {
-      color: #FFFFFF;
+      color: $color-white;
       margin-bottom: 2rem;
       line-height: 1.6;
     }
@@ -713,19 +722,17 @@ body {
   
   .footer {
     padding: 2rem;
-    background-color: #FFFFFF;
+    background-color: $color-white;
   
     &__container {
+      @include flex-center;
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
   
     &__copyright {
       font-size: 0.875rem;
-      color: #666666;
+      color: $color-gray-300;
     }
   
     &__social {
@@ -733,7 +740,7 @@ body {
       gap: 1rem;
   
       &-link {
-        color: #666666;
+        color: $color-gray-300;
         text-decoration: none;
         transition: color 0.3s ease;
   
@@ -797,9 +804,7 @@ body {
     }
   
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex-center;
       flex-direction: row;
     }
   
@@ -830,7 +835,7 @@ body {
       left: 0;
       right: 0;
       flex-direction: column;
-      background: #fff;
+      background: $color-white;
       padding: 1rem;
       margin: 0;
       text-align: center;
@@ -847,10 +852,8 @@ body {
     }
   
     .hero__email {
-      display: flex;
-      justify-content: center;
+      @include flex-center;
       flex-direction: column;
-      align-items: center;
       gap: 1rem;
     }
   
