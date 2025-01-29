@@ -1,0 +1,799 @@
+header {
+  background: #fff;
+  color: #3A2C4A;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+.logo .logo__image {
+  height: 50px;
+  width: auto;
+}
+.logo .logo__text {
+  font-family: Mulish, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #D6284A;
+  text-align: center;
+}
+.logo .logo__text--highlight {
+  color: #553d67;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+}
+.nav-links a {
+  color: #553d67;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #f64c72;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #553d67;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1025px) {
+  nav {
+    gap: 4rem;
+  }
+  .logo__image {
+    height: 50px;
+  }
+  .nav-links {
+    gap: 2.5rem;
+  }
+  .nav-links a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav {
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo__image {
+    height: 50px;
+  }
+  .nav-links {
+    gap: 2.5rem;
+  }
+  .nav-links a {
+    font-size: 18px;
+  }
+}
+/* ********************************* Hero Styles Start ******************************* */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: url("../assets/images/hero_img.webp") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  width: 100%;
+  min-height: 583px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.hero .hero__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.hero .hero__description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.hero .hero__email {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero .hero__email .hero__email-input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+.hero .hero__email .hero__email-button {
+  padding: 0.75rem 1.5rem;
+  background: #D6284A;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+/* ********************************* About Styles Start ******************************* */
+.about {
+  background: #fff;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  max-width: 900px;
+  margin: -5% auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.about .about__container {
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+}
+.about .about__container .about__title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #553D67;
+  margin-bottom: 20px;
+  font-family: Mulish, sans-serif;
+}
+.about .about__container .about__description {
+  font-size: 16px;
+  color: #4A5A6A;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.about .about__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.about .about__image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ********************************* Feature Styles Start ******************************* */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -50px;
+}
+.features .features__container {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  width: 90%;
+  margin-bottom: -25px;
+  justify-content: space-around;
+}
+.features .features__container .feature__card {
+  background: #F8F8F8;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  flex: 1;
+  max-width: 300px;
+}
+.features .features__container .feature__card img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 15px;
+}
+.features .features__container .feature__card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.features .features__container .feature__card p {
+  font-size: 14px;
+  color: rgba(73, 92, 118, 0.6980392157);
+}
+
+/* ********************************* Achievement Styles Start ******************************* */
+.achievements {
+  background-color: #D6284A;
+  padding: 80px 0;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.achievements .achievements__container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 5% auto 0;
+  text-align: center;
+}
+.achievements .achievements__container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.achievements .achievements__container > p {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.achievements .achievements__container .achievement__item__container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.achievements .achievements__container .achievement__item__container .achievement__item {
+  text-align: center;
+  flex-basis: calc(25% - 22.5px); /* 4 items per row on desktop */
+}
+.achievements .achievements__container .achievement__item__container .achievement__item h3 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.achievements .achievements__container .achievement__item__container .achievement__item p {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* *********************************What-Do-We-Do Styles Start******************************* */
+.what-we-do {
+  padding: 80px 0;
+  background-color: #fff;
+}
+.what-we-do__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.what-we-do .section-title {
+  text-align: center;
+  color: #553D67;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.what-we-do .underline {
+  width: 80px;
+  height: 3px;
+  background-color: #F64C72;
+  margin: 0 auto 50px;
+}
+.what-we-do .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.what-we-do .service-card {
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+.what-we-do .service-card:hover {
+  transform: translateY(-5px);
+}
+.what-we-do .service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.what-we-do .service-card h3 {
+  color: #553D67;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.what-we-do .service-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/***************************************Mission styles*******************************/
+.mission-section {
+  background-color: #D6284A;
+  color: white;
+  width: 100%;
+}
+.mission-section .mission-wrapper {
+  display: flex;
+}
+.mission-section .mission-image {
+  width: 50%;
+  height: auto;
+}
+.mission-section .mission-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mission-section .mission-content {
+  width: 50%;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mission-section .mission-content h2 {
+  text-align: center;
+}
+.mission-section .mission-content .mission-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.mission-section .mission-content .mission-text {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mission-section .mission-content .mission-button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+/***************************************Our Team styles*******************************/
+.team-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team-header h2 {
+  font-size: 32px;
+  color: #553D67;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 400;
+}
+.team-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #ff4d4d;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  background: #F8F8F8;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member .member-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.team-member .member-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team-member .member-info {
+  padding: 20px;
+}
+.team-member .member-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.team-member .member-info .position {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.team-member .member-info p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.navigation {
+  text-align: right;
+  margin-top: 20px;
+}
+.navigation a {
+  color: #666;
+  text-decoration: none;
+}
+
+/***************************************Testimonial Styles *******************************/
+.testimonial-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.testimonial-header h2 {
+  font-size: 32px;
+  color: #333;
+  position: relative;
+  padding-bottom: 15px;
+}
+.testimonial-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #ff4d4d;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.testimonial-grid .testimonial-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.testimonial-grid .testimonial-card .star-rating {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+.testimonial-grid .testimonial-card .star-rating span {
+  font-size: 20px;
+}
+.testimonial-grid .testimonial-card .review-text {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 80px;
+}
+.testimonial-grid .testimonial-card .reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.testimonial-grid .testimonial-card .reviewer-info .reviewer-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial-grid .testimonial-card .reviewer-info .reviewer-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonial-grid .testimonial-card .reviewer-info .reviewer-details h3 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.testimonial-grid .testimonial-card .reviewer-info .reviewer-details p {
+  color: #666;
+  font-size: 12px;
+}
+
+.navigation-arrows {
+  position: absolute;
+  bottom: -70px;
+  right: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+.navigation-arrows .nav-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navigation-arrows .nav-arrow:hover {
+  background: #f5f5f5;
+}
+.navigation-arrows .nav-arrow svg {
+  width: 20px;
+  height: 20px;
+  fill: #666;
+}
+
+/*************************************** Want to Work *******************************/
+.work-with-us {
+  background-color: #D6284A;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: 10%;
+}
+.work-with-us__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.work-with-us__title {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-family: Mulish, sans-serif;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.work-with-us__description {
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+.work-with-us__form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.work-with-us__form__input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+}
+
+/*************************************** Footer Styles *******************************/
+.footer {
+  padding: 2rem;
+  background-color: #FFFFFF;
+}
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__copyright {
+  font-size: 0.875rem;
+  color: #666666;
+}
+.footer__social {
+  display: flex;
+  gap: 1rem;
+}
+.footer__social-link {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer__social-link:hover {
+  color: #E75D7C;
+}
+
+/*************************************** Tablet View *******************************/
+@media (max-width: 1024px) {
+  /* Tablet View */
+  .about {
+    margin: 0 auto;
+    box-shadow: none;
+  }
+  .features__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature__card {
+    max-width: 80%;
+  }
+  .feature__card:last-child {
+    margin-bottom: -50px;
+  }
+  .team-member:last-child {
+    display: none;
+  }
+  /* *********************** Mobile What-do-we-do Styles Start **********************/
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* *********************** Mobile Mission Styles Start **********************/
+  .mission-image {
+    display: none;
+  }
+  .mission-content {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+  .mission-text {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .navigation-arrows {
+    bottom: -50px;
+    right: 20px;
+  }
+}
+/*************************************** Mobile View *******************************/
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .logo a {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .logo__image {
+    height: 40px;
+  }
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+  /* ********************************* Mobile Hero Styles Start ************************ */
+  .hero__email {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  /* ********************************* Mobile About Styles Start ************************ */
+  .about__image-container {
+    display: none;
+  }
+  /* ********************************* Mobile Feature Styles Start ************************ */
+  .features__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature__card {
+    max-width: 90%;
+  }
+  .feature__card:last-child {
+    margin-bottom: -50px;
+  }
+  /* ********************************* Mobile Achievement Styles Start ************************ */
+  .achievement__item {
+    flex-basis: calc(50% - 15px);
+  }
+  /* ********************************* Mobile What-do-we-do Styles Start ************************ */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  /* ********************************* Mobile Footer Styles Start ************************ */
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .work-with-us__title {
+    font-size: 1.5rem;
+  }
+  .navigation-arrows {
+    bottom: -50px;
+    right: -25px;
+  }
+  .work-with-us {
+    margin-top: 20%;
+    padding-top: 3rem;
+  }
+  .testimonial-card-2,
+  .testimonial-card-3 {
+    display: none;
+  }
+}/*# sourceMappingURL=styless.css.map */
