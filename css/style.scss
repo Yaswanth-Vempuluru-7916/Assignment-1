@@ -725,7 +725,9 @@ body {
     background-color: $color-white;
   
     &__container {
-      @include flex-center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       max-width: 1200px;
       margin: 0 auto;
     }
