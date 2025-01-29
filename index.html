@@ -5,8 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechnoFevers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css"> <!-- Link to CSS file -->
+  <!-- Preload the Google Font -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for users with JavaScript disabled -->
+  <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Other head elements like CSS, meta tags, etc. -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -16,7 +24,7 @@
     <nav>
       <div class="logo">
         <a href="#">
-          <img src="assets/images/Techno Fevers 1.png" alt="Logo" class="logo__image">
+          <img src="assets/images/Techno Fevers 1.webp" alt="Logo" class="logo__image">
           <div class="logo__text">TECHNO<span class="logo__text--highlight">FEVERS</span>
             </div>
         </a>
@@ -72,7 +80,7 @@
       </p>
 
       <div class="about__image-container">
-        <img src="./assets/images/about_us_image.png" alt="about_us_image">
+        <img src="./assets/images/about_us_image.webp" alt="about_us_image">
       </div>
 
   </section>
@@ -81,19 +89,19 @@
    <section id="features" class="features">
     <div class="features__container">
       <div class="feature__card">
-        <img src="./assets/images/feature1.png" alt="Updated knowledge">
+        <img src="./assets/images/feature1.webp" alt="Updated knowledge">
         <h3>Updated knowledge</h3>
         <p>They all live tidily together in teams. <br> with your team and information in...</p>
       </div>
 
       <div class="feature__card">
-        <img src="./assets/images/feature2.png" alt="We are reliable">
+        <img src="./assets/images/feature2.webp" alt="We are reliable">
         <h3>We are reliable</h3>
         <p>They all live tidily together in teams. <br> with your team and information in...</p>
       </div>
 
       <div class="feature__card ">
-        <img src="./assets/images/feature3.png" alt="Time management">
+        <img src="./assets/images/feature3.webp" alt="Time management">
         <h3>Time management</h3>
         <p>They all live tidily together in teams. <br> with your team and information in...</p>
       </div>
@@ -137,42 +145,42 @@
         <div class="services-grid">
           <!-- Card 1 -->
           <div class="service-card">
-            <img src="./assets/images/web-dev-icon.png" alt="Web Development">
+            <img src="./assets/images/web-dev-icon.webp" alt="Web Development">
             <h3>Web design & development</h3>
             <p>We work with you to develop a user experience which delivers value to your audience. Value means repeat visits and referrals via social media and other channels.</p>
           </div>
           
           <!-- Card 2 -->
           <div class="service-card">
-            <img src="./assets/images/maintenance-icon.png" alt="Maintenance">
+            <img src="./assets/images/maintenance-icon.webp" alt="Maintenance">
             <h3>Maintenance & support</h3>
             <p>Software maintenance and support services involve both appilication and product maintenance.</p>
           </div>
           
           <!-- Card 3 -->
           <div class="service-card">
-            <img src="./assets/images/newsletter-icon.png" alt="Newsletter">
+            <img src="./assets/images/newsletter-icon.webp" alt="Newsletter">
             <h3>Newsletters & landing page</h3>
             <p>A newsletter landing page is a really great way to stay engaged with your leads and stay on their minds and even increase your sales.</p>
           </div>
           
           <!-- Card 4 -->
           <div class="service-card">
-            <img src="./assets/images/content-icon.png" alt="Content Writing">
+            <img src="./assets/images/content-icon.webp" alt="Content Writing">
             <h3>Content writing</h3>
             <p>Our content writers are experts at creating blog posts that boost SEO, engage readers, and promote social interaction.</p>
           </div>
           
           <!-- Card 5 -->
           <div class="service-card">
-            <img src="./assets/images/computer-icon.png" alt="Computer Projects">
+            <img src="./assets/images/computer-icon.webp" alt="Computer Projects">
             <h3>Computer projects</h3>
             <p>We provide projects guidance for every academic course like diploma, BE, BTech in computer engineering. We do care about your project importance because once we were also the students.</p>
           </div>
           
           <!-- Card 6 -->
           <div class="service-card">
-            <img src="./assets/images/redesign-icon.png" alt="Redesigning">
+            <img src="./assets/images/redesign-icon.webp" alt="Redesigning">
             <h3>Redesigning projects</h3>
             <p>We work with you to develop a user experience which delivers value to your audience. Value means repeat visits and referrals via social media and other channels.</p>
           </div>
@@ -185,7 +193,7 @@
     <section class="mission-section">
       <div class="mission-wrapper">
         <div class="mission-image">
-          <img src="./assets/images/mission_img.png" alt="Professional in business attire">
+          <img src="./assets/images/mission_img.webp" alt="Professional in business attire">
         </div>
         <div class="mission-content">
           <h2 class="mission-title">OUR MISSION</h2>
@@ -211,7 +219,7 @@
       <div class="team-grid">
         <div class="team-member">
           <div class="member-image">
-            <img src="./assets/images/rachel.png" alt="Rachel Barlet">
+            <img src="./assets/images/rachel.webp" alt="Rachel Barlet">
           </div>
           <div class="member-info">
             <h3>Rachel Barlet</h3>
@@ -222,7 +230,7 @@
         
         <div class="team-member">
           <div class="member-image">
-            <img src="./assets/images/michael.png" alt="Michael Johnson">
+            <img src="./assets/images/michael.webp" alt="Michael Johnson">
           </div>
           <div class="member-info">
             <h3>Michael Johnson</h3>
@@ -233,7 +241,7 @@
         
         <div class="team-member">
           <div class="member-image">
-            <img src="./assets/images/lisa.png" alt="Lisa Aniston">
+            <img src="./assets/images/lisa.webp" alt="Lisa Aniston">
           </div>
           <div class="member-info">
             <h3>Lisa Aniston</h3>
@@ -244,7 +252,7 @@
         
         <div class="team-member">
           <div class="member-image">
-            <img src="./assets/images/david.png" alt="David Schimmer">
+            <img src="./assets/images/david.webp" alt="David Schimmer">
           </div>
           <div class="member-info">
             <h3>David Schimmer</h3>
@@ -260,75 +268,62 @@
     </section>
     
     <!-- Testimonial Section -->
-  <section class="testimonial-section">
-    <div class="testimonial-header">
-        <h2>WHAT PEOPLE SAY ABOUT US</h2>
-    </div>
-    
-    <div class="testimonial-grid">
-        <div class="testimonial-card testimonial-card-1">
-            <div class="star-rating">
-                <span>★★★★★</span>
-            </div>
-            <p class="review-text">Feugillus. At prepretious of cubile easis senectous various socis suspendecious integer suspendise tutpris serectum perellecturque nibh iovulis.</p>
-            <div class="reviewer-info">
-                <div class="reviewer-image">
-                    <img src="./assets/images/amy.png" alt="Amy Goldsberg">
-                </div>
-                <div class="reviewer-details">
-                    <h4>Amy Goldsberg</h4>
-                    <p>CEO at Coca Cola</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-card testimonial-card-2">
-            <div class="star-rating">
-                <span>★★★★★</span>
-            </div>
-            <p class="review-text">Eros nulla mollis nec tortor. Eu class ante accumsan habitant morbi neque hac purus magnis varius pulvinar hac pede magnis.</p>
-            <div class="reviewer-info">
-                <div class="reviewer-image">
-                    <img src="./assets/images/john.png" alt="John Jandali">
-                </div>
-                <div class="reviewer-details">
-                    <h4>John Jandali</h4>
-                    <p>CTO at Lorem</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-card testimonial-card-3">
-            <div class="star-rating">
-                <span>★★★★★</span>
-            </div>
-            <p class="review-text">Eros nulla mollis nec tortor. Eu class ante accumsan habitant morbi neque hac purus magnis varius pulvinar hac pede magnis.</p>
-            <div class="reviewer-info">
-                <div class="reviewer-image">
-                    <img src="./assets/images/lina.png" alt="Lina Sloan">
-                </div>
-                <div class="reviewer-details">
-                    <h4>Lina Sloan</h4>
-                    <p>Content writer at Uber</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="navigation-arrows">
-        <div class="nav-arrow prev">
-            <svg viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-            </svg>
-        </div>
-        <div class="nav-arrow next">
-            <svg viewBox="0 0 24 24">
-                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
-            </svg>
-        </div>
-    </div>
-</section>
-
+    <section class="testimonial-section">
+      <div class="testimonial-header">
+          <h2>WHAT PEOPLE SAY ABOUT US</h2>
+      </div>
+  
+      <div class="testimonial-grid">
+          <div class="testimonial-card testimonial-card-1">
+              <div class="star-rating">
+                  <span>★★★★★</span>
+              </div>
+              <p class="review-text">Feugillus. At prepretious of cubile easis senectous various socis suspendecious integer suspendise tutpris serectum perellecturque nibh iovulis.</p>
+              <div class="reviewer-info">
+                  <div class="reviewer-image">
+                      <img src="./assets/images/amy.webp" alt="Amy Goldsberg">
+                  </div>
+                  <div class="reviewer-details">
+                      <h3>Amy Goldsberg</h3> <!-- Changed from h4 to h3 -->
+                      <p>CEO at Coca Cola</p>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="testimonial-card testimonial-card-2">
+              <div class="star-rating">
+                  <span>★★★★★</span>
+              </div>
+              <p class="review-text">Eros nulla mollis nec tortor. Eu class ante accumsan habitant morbi neque hac purus magnis varius pulvinar hac pede magnis.</p>
+              <div class="reviewer-info">
+                  <div class="reviewer-image">
+                      <img src="./assets/images/john.webp" alt="John Jandali">
+                  </div>
+                  <div class="reviewer-details">
+                      <h3>John Jandali</h3> <!-- Changed from h4 to h3 -->
+                      <p>CTO at Lorem</p>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="testimonial-card testimonial-card-3">
+              <div class="star-rating">
+                  <span>★★★★★</span>
+              </div>
+              <p class="review-text">Eros nulla mollis nec tortor. Eu class ante accumsan habitant morbi neque hac purus magnis varius pulvinar hac pede magnis.</p>
+              <div class="reviewer-info">
+                  <div class="reviewer-image">
+                      <img src="./assets/images/lina.webp" alt="Lina Sloan">
+                  </div>
+                  <div class="reviewer-details">
+                      <h3>Lina Sloan</h3> <!-- Changed from h4 to h3 -->
+                      <p>Content writer at Uber</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
 <section class="work-with-us">
   <div class="work-with-us__container">
       <h2 class="work-with-us__title">WANT TO WORK WITH US</h2>
@@ -349,11 +344,11 @@
           <p>All rights reserved</p>
       </div>
       <div class="footer__social">
-          <a href="#" class="footer__social-link"><img src="./assets/images/youtube.png" alt="Youtube"></a>
-          <a href="#" class="footer__social-link"><img src="./assets/images/twitter.png" alt="Twitter"></a>
-          <a href="#" class="footer__social-link"><img src="./assets/images/facebook.png" alt="Facebook"></a>
-          <a href="#" class="footer__social-link"><img src="./assets/images/instagram.png" alt="Instagram"></a>
-          <a href="#" class="footer__social-link"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" class="footer__social-link"><img src="./assets/images/youtube.webp" alt="Youtube"></a>
+          <a href="#" class="footer__social-link"><img src="./assets/images/twitter.webp" alt="Twitter"></a>
+          <a href="#" class="footer__social-link"><img src="./assets/images/facebook.webp" alt="Facebook"></a>
+          <a href="#" class="footer__social-link"><img src="./assets/images/instagram.webp" alt="Instagram"></a>
+          <a href="#" class="footer__social-link"><img src="./assets/images/linkedin.webp" alt="LinkedIn"></a>
       </div>
   </div>
 </footer>

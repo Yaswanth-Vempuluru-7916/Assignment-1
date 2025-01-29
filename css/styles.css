@@ -8,9 +8,9 @@
 
   header {
     background: #fff;
-    color: #553d67;
+    color: #3A2C4A;
     padding: 1rem 2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
   }
 
   nav {
@@ -45,7 +45,7 @@
     font-family: Mulish, sans-serif;
     font-size: 18px;
     font-weight: 700;
-    color: #F64C72;
+    color: #D6284A;
     text-align: center;
   }
   .logo__text--highlight {
@@ -138,7 +138,7 @@
 .hero {
   text-align: center;
   padding: 5rem 2rem;
-  background: url("../assets/images/hero_img.png") no-repeat center center;
+  background: url("../assets/images/hero_img.webp") no-repeat center center;
   background-size: cover;
   color: #fff;
   width: 100%; 
@@ -180,7 +180,7 @@
 
 .hero__email-button {
   padding: 0.75rem 1.5rem;
-  background: #f64c72;
+  background: #D6284A;
   color: #fff;
   cursor: pointer;
   outline: none;
@@ -223,7 +223,7 @@
 
 .about__description {
   font-size: 16px;
-  color: #6D7D8B;
+  color: #4A5A6A;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -262,10 +262,10 @@
 } 
  
 .feature__card { 
-  background: #fff; 
+  background: #F8F8F8;
   padding: 20px; 
   text-align: center; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
   flex: 1; 
   max-width: 300px; 
 } 
@@ -288,7 +288,7 @@
 }
 /* *********************************Achievement Styles******************************* */ 
 .achievements {
-  background-color: #F64C72;
+  background-color: #D6284A;
   padding: 80px 0;
   color: white;
   position: relative;
@@ -406,7 +406,7 @@
 /***************************************Mission styles*******************************/
 
 .mission-section {
-  background-color: #F64C72;
+  background-color: #D6284A;
   color: white;
   width: 100%;
 }
@@ -503,7 +503,7 @@
 }
 
 .team-member {
-  background: #fff;
+  background: #F8F8F8; 
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -684,7 +684,7 @@
 }
 /***************************************want to work *******************************/
 .work-with-us {
-  background-color: #E75D7C;
+  background-color:  #D6284A;
   padding: 4rem 2rem;
   text-align: center;
   margin-top: 10%;
@@ -699,7 +699,7 @@
   color: #FFFFFF;
   font-size: 2rem;
   font-family: Mulish, sans-serif;
-  font-weight: 6  00;
+  font-weight: 600;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
