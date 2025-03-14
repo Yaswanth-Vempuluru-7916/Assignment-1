@@ -19,19 +19,15 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  flex-direction: column;
 }
 header .logo__image {
-  position: absolute;
-  top: 2px;
-  left: 667px;
+  width: 120px;
+  height: 120px;
 }
 header .logo__text {
   width: 145px;
   height: 23px;
-  position: absolute;
-  top: 114px;
-  left: 649px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,4 +41,86 @@ header .logo__text {
 }
 header .logo__text--highlight {
   color: #553d67;
+}
+header nav {
+  width: 100%;
+  text-align: center;
+}
+header nav .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  padding: 0;
+  margin: 0;
+}
+header nav .nav-links li a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 176%;
+  letter-spacing: 0%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #553d67;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 176%;
+  text-decoration: none;
+  color: #553d67;
+}
+header nav .nav-links li a:hover {
+  color: #f64c72;
+}
+header nav .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    position: relative;
+  }
+  header .logo {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0 0 20px;
+  }
+  header .logo__image {
+    width: 39.72px;
+    height: 39.72px;
+  }
+  header .logo__text {
+    width: 48px;
+    height: 7px;
+    font-size: 5.96px;
+  }
+  header nav {
+    position: relative;
+  }
+  header nav .nav-links {
+    display: none;
+  }
+  header nav .hamburger {
+    display: block;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
+  header nav .hamburger div {
+    width: 16.56px;
+    background-color: #553d67;
+    display: block;
+    margin-bottom: 5px;
+    border: 1.6px solid black;
+    border-radius: 2px;
+  }
+  header nav .hamburger div:last-child {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
