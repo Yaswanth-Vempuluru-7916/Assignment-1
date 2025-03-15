@@ -11,7 +11,7 @@ body {
 header {
   background: #fff;
   color: #3a2c4a;
-  width: 100vw;
+  width: 100%;
   height: 227px;
   position: relative;
 }
@@ -52,13 +52,9 @@ header nav .nav-links {
   justify-content: center;
   gap: 45px;
   padding: 0;
-  margin: 0;
+  margin-top: 20px;
 }
 header nav .nav-links li a {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 176%;
   letter-spacing: 0%;
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -85,8 +81,8 @@ header nav .hamburger {
     position: relative;
   }
   header .logo {
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     margin: 20px 0 0 20px;
   }
   header .logo__image {
@@ -109,18 +105,160 @@ header nav .hamburger {
     height: 36px;
     width: 36px;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
+    position: fixed;
+    right: 29.72px;
   }
   header nav .hamburger div {
-    width: 16.56px;
+    width: 25px;
     background-color: #553d67;
     display: block;
     margin-bottom: 5px;
-    border: 1.6px solid black;
+    border: 1.8px solid black;
     border-radius: 2px;
   }
   header nav .hamburger div:last-child {
     margin-bottom: 0;
+  }
+}
+/**********************************Hero**************************************/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 583px;
+  background: url("../assets/images/hero_img.webp") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+}
+.hero__title {
+  width: 563px;
+  height: 120px;
+  font-family: Mulish, sans-serif;
+  color: #fff;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 100%;
+}
+.hero__title .mobile-break {
+  display: none;
+}
+.hero__title .desktop-break {
+  display: block;
+}
+.hero__description {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 163%;
+  margin-top: 15px;
+}
+.hero__description .mobile-desc {
+  display: none;
+}
+.hero__description .desktop-desc {
+  display: block;
+}
+.hero__email {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.hero__email-input {
+  border: none;
+  width: 320px;
+  height: 56px;
+  border: 2px solid #bbc8d4;
+  outline: none;
+  border-radius: 2px;
+  padding: 20px;
+  font-family: Mulish, sans-serif;
+  color: #bbc8d4;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 176%;
+}
+.hero__email-button {
+  border: none;
+  border-radius: 4px;
+  background: #f64c72;
+  color: white;
+  cursor: pointer;
+  font-family: Mulish, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  width: 165px;
+  height: 56px;
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    margin-top: 24px;
+  }
+  .hero__title {
+    width: 284px;
+    height: 200px;
+    font-family: Mulish, sans-serif;
+    color: #fff;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 100%;
+  }
+  .hero__title .desktop-break {
+    display: none;
+  }
+  .hero__title .mobile-break {
+    display: block;
+  }
+  .hero__description {
+    width: 314px;
+    height: 62px;
+    font-family: Mulish, sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .hero__description .desktop-desc {
+    display: none;
+  }
+  .hero__description .mobile-desc {
+    display: block;
+  }
+  .hero__email {
+    width: 302px;
+    height: 115.95px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__email-input {
+    width: 302px;
+    height: 52.85px;
+    border: 1.89px solid #bbc8d4;
+    border-radius: 3.77px;
+    font-family: Mulish, sans-serif;
+    color: #bbc8d4;
+    font-weight: 600;
+    font-size: 15.1px;
+    line-height: 176%;
+  }
+  .hero__email-button {
+    border-radius: 3.77px;
+    font-family: Mulish, sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15.1px;
+    line-height: 22.65px;
+    width: 165px;
+    height: 56px;
   }
 }/*# sourceMappingURL=style.css.map */
