@@ -147,6 +147,10 @@ header nav .hamburger {
 }
 .hero__title .desktop-break {
   display: block;
+  margin-bottom: 10px;
+}
+.hero__title .desktop-break:last-child {
+  margin-bottom: 0;
 }
 .hero__description {
   font-family: "Open Sans", sans-serif;
@@ -161,6 +165,10 @@ header nav .hamburger {
 }
 .hero__description .desktop-desc {
   display: block;
+  margin-bottom: 5px;
+}
+.hero__description .desktop-desc:last-child {
+  margin-bottom: 0;
 }
 .hero__email {
   margin-top: 48px;
@@ -215,6 +223,10 @@ header nav .hamburger {
   }
   .hero__title .mobile-break {
     display: block;
+    margin-bottom: 8px;
+  }
+  .hero__title .mobile-break:last-child {
+    margin-bottom: 0;
   }
   .hero__description {
     width: 314px;
@@ -232,6 +244,10 @@ header nav .hamburger {
   }
   .hero__description .mobile-desc {
     display: block;
+    margin-bottom: 2.5px;
+  }
+  .hero__description .mobile-desc:last-child {
+    margin-bottom: 0;
   }
   .hero__email {
     width: 302px;
