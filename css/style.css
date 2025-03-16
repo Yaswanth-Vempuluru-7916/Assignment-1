@@ -287,7 +287,6 @@ header nav .hamburger {
 }
 .about__card {
   background-color: #fff;
-  width: 961px;
   max-width: 961px;
   height: 634px;
   margin: 0 auto;
@@ -360,8 +359,8 @@ header nav .hamburger {
   margin-bottom: 10px;
 }
 .about__value-icon .circle {
-  width: 40px;
-  height: 40px;
+  width: 49px;
+  height: 49px;
   background-color: #fff;
   border: 1px solid #666666;
   border-radius: 50%;
@@ -371,23 +370,64 @@ header nav .hamburger {
   z-index: 2;
 }
 .about__value-text h3 {
-  font-family: Mulish, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #6d7d8b;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 163%;
   margin-bottom: 5px;
   text-align: center;
   text-transform: uppercase;
 }
-.about__value-text h4 {
-  font-family: Mulish, sans-serif;
-  color: #6d7d8b;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 100%;
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 133px;
+  position: relative;
+  z-index: 2;
+  gap: 30px;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+.feature-card {
+  width: 367px;
+  height: 296px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   text-align: center;
-  text-transform: uppercase;
+  margin-bottom: -60px;
+  margin-top: 16.7px;
+  box-shadow: 0px 10px 15px 0px rgba(6, 0, 0, 0.2509803922);
+}
+.feature-card__icon {
+  width: 75px;
+  height: 70.14px;
+  margin: 0 auto 15px;
+}
+.feature-card__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.feature-card__title {
+  font-family: Mulish, sans-serif;
+  color: #553d67;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+.feature-card__description {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(73, 92, 118, 0.6980392157);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 163%;
 }
 
 /* Media Queries for Responsive Design */
@@ -397,6 +437,9 @@ header nav .hamburger {
     padding-top: 40px;
   }
   .about__card {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
     padding: 30px 20px;
   }
   .about__values {
@@ -406,6 +449,18 @@ header nav .hamburger {
   .about__value-item {
     max-width: 150px;
   }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card {
+    width: 367px;
+    height: 296px;
+    margin-bottom: 20px;
+  }
+  .feature-card:last-child {
+    margin-bottom: -60px; /* Only the last card overlaps with achievements */
+  }
 }
 @media screen and (max-width: 480px) {
   .about {
@@ -413,41 +468,44 @@ header nav .hamburger {
   }
   .about__card {
     padding: 20px 15px;
-    width: 100%; /* Ensure the card adjusts to mobile width */
-    max-width: 100%;
-    height: auto; /* Allow height to adjust based on content */
+    width: 95%;
+    max-width: 95%;
+    height: auto;
   }
-  .about__title {
+  .about__card__title {
     font-size: 20px;
   }
-  .about__description {
+  .about__card__description {
     font-size: 14px;
     max-width: 100%; /* Remove max-width constraint for mobile */
     margin-left: 15px;
     margin-right: 15px;
   }
-  .about__description .desktop-break {
+  .about__card__description .desktop-break {
     display: none; /* Hide desktop breaks on mobile */
   }
-  .about__description .mobile-break {
+  .about__card__description .mobile-break {
     display: block; /* Show mobile breaks on mobile */
     margin-bottom: 8px; /* Slightly less spacing for mobile */
   }
-  .about__description .mobile-break:last-child {
+  .about__card__description .mobile-break:last-child {
     margin-bottom: 0; /* No extra margin for the last line */
   }
   .about__values {
-    flex-direction: row;
-    gap: 10px;
+    display: none;
   }
-  .about__value-item {
-    max-width: 100px;
+  .features {
+    margin-top: 30px;
   }
-  .about__value-text h3 {
+  .feature-card {
+    width: 90%;
+    padding: 20px 15px;
+  }
+  .feature-card__title {
+    font-size: 16px;
+  }
+  .feature-card__description {
     font-size: 12px;
-  }
-  .about__value-text h4 {
-    font-size: 10px;
   }
 }
 .achievements {
