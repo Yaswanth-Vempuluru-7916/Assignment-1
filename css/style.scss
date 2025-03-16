@@ -115,19 +115,18 @@ header {
     }
   }
 }
-
 @media screen and (max-width: $mobile) {
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: auto;
-    position: relative;
-
+    padding: 20px;
+    
     .logo {
       align-items: center;
       justify-content: center;
-      margin: 20px 0 0 20px;
+      margin: 0; /* Remove margin */
       &__image {
         width: 39.72px;
         height: 39.72px;
@@ -150,8 +149,9 @@ header {
         height: 36px;
         width: 36px;
         cursor: pointer;
-        position: fixed;
-        right: 29.72px;
+        position: absolute; /* Change from fixed to absolute */
+        right: 0; /* Position relative to header */
+        top: 0; /* Align to top of container */
 
         div {
           width: 25px;
