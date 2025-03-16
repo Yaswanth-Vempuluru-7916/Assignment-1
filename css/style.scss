@@ -434,8 +434,6 @@ header {
   width: 367px;
   height: 296px;
   background-color: $color-white;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
   margin-bottom: -60px;
@@ -468,13 +466,14 @@ header {
 @media screen and (max-width: $tablet) {
   .about {
     margin-top: 0; 
-    padding-top: 40px;
     
     &__card {
-      width: 90%; // Make it responsive
-      max-width: 90%;
+      width: 100%; // Make it responsive
+      max-width: 100%;
       height: auto; // Allow height to adjust based on content
-      padding: 30px 20px;
+      padding-top: 44px;
+      margin-left: 0px;
+      margin-right: 0px;
     }
     
     &__values {
@@ -490,6 +489,7 @@ header {
   .features {
     flex-direction: column;
     align-items: center;
+    margin-top: 133px;
   }
   
   .feature-card {
@@ -507,19 +507,22 @@ header {
   .about {
     padding-top: 30px;
     
+    &__title {
+      font-size: 30px;
+    }
     &__card {
       padding: 20px 15px;
-      width: 95%; // Further adjust for mobile
-      max-width: 95%;
+      width: 100%; 
+      max-width: 100%;
       height: auto;
+      margin-left: 0px;
+      margin-right: 0px;
     
-    &__title {
-      font-size: 20px;
     }
     
     &__description {
-      font-size: 14px;
-      max-width: 100%; /* Remove max-width constraint for mobile */
+      font-size: 16px;
+      max-width: 100%; 
       margin-left: 15px;
       margin-right: 15px;
       
@@ -538,26 +541,39 @@ header {
     }
     
     
-  }
   &__values {
     display: none;
   }
 }
 
 .features {
-  margin-top: 30px;
+  margin-top: 96.74px;
+
+  &__icon {
+    width: 63.96px;
+    height: 59.81px;
+    margin: 0 auto 15px;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
 .feature-card {
-  width: 90%;
+  width: 313px;
+  height: 252.44px;
   padding: 20px 15px;
   
   &__title {
-    font-size: 16px;
+    @include typography($font-secondary, $color-primary-dark, 400, 22.17px, 100%);
+    margin-bottom: 15px;
   }
   
   &__description {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 }

@@ -395,8 +395,6 @@ header nav .hamburger {
   width: 367px;
   height: 296px;
   background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
   margin-bottom: -60px;
@@ -434,13 +432,14 @@ header nav .hamburger {
 @media screen and (max-width: 768px) {
   .about {
     margin-top: 0;
-    padding-top: 40px;
   }
   .about__card {
-    width: 90%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    padding: 30px 20px;
+    padding-top: 44px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .about__values {
     flex-direction: row;
@@ -452,6 +451,7 @@ header nav .hamburger {
   .features {
     flex-direction: column;
     align-items: center;
+    margin-top: 133px;
   }
   .feature-card {
     width: 367px;
@@ -466,46 +466,65 @@ header nav .hamburger {
   .about {
     padding-top: 30px;
   }
+  .about__title {
+    font-size: 30px;
+  }
   .about__card {
     padding: 20px 15px;
-    width: 95%;
-    max-width: 95%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
+    margin-left: 0px;
+    margin-right: 0px;
   }
-  .about__card__title {
-    font-size: 20px;
-  }
-  .about__card__description {
-    font-size: 14px;
-    max-width: 100%; /* Remove max-width constraint for mobile */
+  .about__description {
+    font-size: 16px;
+    max-width: 100%;
     margin-left: 15px;
     margin-right: 15px;
   }
-  .about__card__description .desktop-break {
+  .about__description .desktop-break {
     display: none; /* Hide desktop breaks on mobile */
   }
-  .about__card__description .mobile-break {
+  .about__description .mobile-break {
     display: block; /* Show mobile breaks on mobile */
     margin-bottom: 8px; /* Slightly less spacing for mobile */
   }
-  .about__card__description .mobile-break:last-child {
+  .about__description .mobile-break:last-child {
     margin-bottom: 0; /* No extra margin for the last line */
   }
   .about__values {
     display: none;
   }
   .features {
-    margin-top: 30px;
+    margin-top: 96.74px;
+  }
+  .features__icon {
+    width: 63.96px;
+    height: 59.81px;
+    margin: 0 auto 15px;
+  }
+  .features__icon img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .feature-card {
-    width: 90%;
+    width: 313px;
+    height: 252.44px;
     padding: 20px 15px;
   }
   .feature-card__title {
-    font-size: 16px;
+    font-family: Mulish, sans-serif;
+    color: #553d67;
+    font-weight: 400;
+    font-size: 22.17px;
+    line-height: 100%;
+    margin-bottom: 15px;
   }
   .feature-card__description {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 .achievements {
