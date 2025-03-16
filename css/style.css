@@ -315,9 +315,19 @@ header nav .hamburger {
   font-size: 18px;
   line-height: 163%;
   margin-bottom: 20px;
-  max-width: 600px;
+  max-width: 700px; /* Adjusted to match the width of the text in the first image */
   margin-left: auto;
   margin-right: auto;
+}
+.about__description .mobile-break {
+  display: none; /* Hide mobile breaks by default */
+}
+.about__description .desktop-break {
+  display: block; /* Show desktop breaks by default */
+  margin-bottom: 10px; /* Consistent spacing between lines */
+}
+.about__description .desktop-break:last-child {
+  margin-bottom: 0; /* No extra margin for the last line */
 }
 .about__values {
   display: flex;
@@ -379,50 +389,7 @@ header nav .hamburger {
   text-transform: uppercase;
 }
 
-.features {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  position: relative;
-  z-index: 2;
-}
-
-.feature-card {
-  width: 30%;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  text-align: center;
-  margin-bottom: -60px;
-}
-.feature-card__icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 15px;
-}
-.feature-card__icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.feature-card__title {
-  font-family: Mulish, sans-serif;
-  color: #553d67;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 130%;
-  margin-bottom: 10px;
-}
-.feature-card__description {
-  font-family: "Open Sans", sans-serif;
-  color: #6d7d8b;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-}
-
+/* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
   .about {
     margin-top: 0;
@@ -438,18 +405,6 @@ header nav .hamburger {
   .about__value-item {
     max-width: 150px;
   }
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-  .feature-card {
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: 20px;
-  }
-  .feature-card:last-child {
-    margin-bottom: -60px;
-  }
 }
 @media screen and (max-width: 480px) {
   .about {
@@ -457,12 +412,28 @@ header nav .hamburger {
   }
   .about__card {
     padding: 20px 15px;
+    width: 100%; /* Ensure the card adjusts to mobile width */
+    max-width: 100%;
+    height: auto; /* Allow height to adjust based on content */
   }
   .about__title {
     font-size: 20px;
   }
   .about__description {
     font-size: 14px;
+    max-width: 100%; /* Remove max-width constraint for mobile */
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .about__description .desktop-break {
+    display: none; /* Hide desktop breaks on mobile */
+  }
+  .about__description .mobile-break {
+    display: block; /* Show mobile breaks on mobile */
+    margin-bottom: 8px; /* Slightly less spacing for mobile */
+  }
+  .about__description .mobile-break:last-child {
+    margin-bottom: 0; /* No extra margin for the last line */
   }
   .about__values {
     flex-direction: row;
@@ -476,19 +447,6 @@ header nav .hamburger {
   }
   .about__value-text h4 {
     font-size: 10px;
-  }
-  .features {
-    margin-top: 30px;
-  }
-  .feature-card {
-    width: 90%;
-    padding: 20px 15px;
-  }
-  .feature-card__title {
-    font-size: 16px;
-  }
-  .feature-card__description {
-    font-size: 12px;
   }
 }
 .achievements {
