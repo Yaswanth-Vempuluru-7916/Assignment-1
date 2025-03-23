@@ -122,10 +122,11 @@ header nav .hamburger {
   }
 }
 /**********************************Hero**************************************/
+/****************************** HERO SECTION *************************************/
 .hero {
   position: relative;
   width: 100%;
-  height: 583px;
+  min-height: 583px; /* Use min-height instead of fixed height */
   background: url("../assets/images/hero_img.webp") no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -133,15 +134,17 @@ header nav .hamburger {
   text-align: center;
   color: white;
   flex-direction: column;
+  padding: 40px 20px; /* Add padding to prevent content from touching edges */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
 .hero__title {
-  width: 563px;
-  height: 120px;
+  max-width: 563px; /* Use max-width instead of fixed width */
   font-family: Mulish, sans-serif;
   color: #fff;
   font-weight: 800;
   font-size: 48px;
   line-height: 100%;
+  margin: 0 auto; /* Center the title */
 }
 .hero__title .mobile-break {
   display: none;
@@ -154,12 +157,15 @@ header nav .hamburger {
   margin-bottom: 0;
 }
 .hero__description {
+  max-width: 563px; /* Use max-width instead of fixed width */
   font-family: "Open Sans", sans-serif;
   color: #fff;
   font-weight: 700;
   font-size: 18px;
   line-height: 163%;
   margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero__description .mobile-desc {
   display: none;
@@ -176,6 +182,7 @@ header nav .hamburger {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping if the container is too narrow */
 }
 .hero__email-input {
   border: none;
@@ -190,6 +197,7 @@ header nav .hamburger {
   font-weight: 600;
   font-size: 16px;
   line-height: 176%;
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 .hero__email-button {
   border: none;
@@ -206,13 +214,59 @@ header nav .hamburger {
   height: 56px;
 }
 
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 500px; /* Adjust height for tablet */
+    padding: 30px 15px;
+  }
+  .hero__title {
+    max-width: 400px; /* Reduce max-width for tablet */
+    font-family: Mulish, sans-serif;
+    color: #fff;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 100%;
+  }
+  .hero__description {
+    max-width: 400px;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 163%;
+  }
+  .hero__email {
+    gap: 15px;
+  }
+  .hero__email-input {
+    width: 300px;
+    height: 52px;
+    padding: 15px;
+    font-family: Mulish, sans-serif;
+    color: #bbc8d4;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 176%;
+  }
+  .hero__email-button {
+    width: 150px;
+    height: 52px;
+    font-family: Mulish, sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
 @media screen and (max-width: 480px) {
   .hero {
     margin-top: 24px;
+    min-height: 450px; /* Adjust height for mobile */
+    padding: 20px 10px;
   }
   .hero__title {
-    width: 284px;
-    height: 200px;
+    max-width: 284px; /* Use max-width instead of fixed width */
     font-family: Mulish, sans-serif;
     color: #fff;
     font-weight: 800;
@@ -230,8 +284,7 @@ header nav .hamburger {
     margin-bottom: 0;
   }
   .hero__description {
-    width: 314px;
-    height: 62px;
+    max-width: 314px; /* Use max-width instead of fixed width */
     font-family: Mulish, sans-serif;
     color: #fff;
     font-weight: 700;
@@ -251,17 +304,18 @@ header nav .hamburger {
     margin-bottom: 0;
   }
   .hero__email {
-    width: 302px;
-    height: 115.95px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
   .hero__email-input {
-    width: 302px;
+    width: 100%; /* Use 100% width to fit container */
+    max-width: 302px;
     height: 52.85px;
     border: 1.89px solid #bbc8d4;
     border-radius: 3.77px;
+    padding: 15px;
     font-family: Mulish, sans-serif;
     color: #bbc8d4;
     font-weight: 600;
@@ -277,6 +331,7 @@ header nav .hamburger {
     line-height: 22.65px;
     width: 165px;
     height: 56px;
+    margin-bottom: 61.15px;
   }
 }
 /*********************************** ABOUT *****************************************/
@@ -1348,7 +1403,6 @@ header nav .hamburger {
   background-color: #f64c72; /* Pinkish-red background */
   padding: 63px 0;
   margin-top: 133px;
-  height: 396px;
 }
 .work-with-us__container {
   display: flex;
@@ -1412,7 +1466,8 @@ header nav .hamburger {
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
   .work-with-us {
-    padding: 60px 0;
+    padding-top: 63px;
+    padding-bottom: 64px;
   }
   .work-with-us__container {
     padding: 0 15px;

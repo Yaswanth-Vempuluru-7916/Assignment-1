@@ -170,21 +170,24 @@ header {
   }
 }
 /**********************************Hero**************************************/
+/****************************** HERO SECTION *************************************/
 .hero {
   position: relative;
   width: 100%;
-  height: 583px;
-  background: url("../assets/images/hero_img.webp") no-repeat center
-    center/cover;
+  min-height: 583px; /* Use min-height instead of fixed height */
+  background: url("../assets/images/hero_img.webp") no-repeat center center/cover;
   @include flex-center();
   text-align: center;
   color: white;
   flex-direction: column;
+  padding: 40px 20px; /* Add padding to prevent content from touching edges */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
 
   &__title {
-    width: 563px;
-    height: 120px;
+    max-width: 563px; /* Use max-width instead of fixed width */
     @include typography($font-secondary, $color-white, 800, 48px, 100%);
+    margin: 0 auto; /* Center the title */
+
     .mobile-break {
       display: none;
     }
@@ -200,8 +203,12 @@ header {
   }
 
   &__description {
+    max-width: 563px; /* Use max-width instead of fixed width */
     @include typography($font-tertiary, $color-white, 700, 18px, 163%);
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
     .mobile-desc {
       display: none;
     }
@@ -215,11 +222,13 @@ header {
       }
     }
   }
+
   &__email {
     margin-top: 48px;
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping if the container is too narrow */
 
     &-input {
       border: none;
@@ -230,7 +239,9 @@ header {
       border-radius: 2px;
       padding: 20px;
       @include typography($font-secondary, #bbc8d4, 600, 16px, 176%);
+      box-sizing: border-box; /* Ensure padding is included in width */
     }
+
     &-button {
       border: none;
       border-radius: 4px;
@@ -244,13 +255,51 @@ header {
   }
 }
 
+/* Media Queries for Responsive Design */
+@media screen and (max-width: $tablet) {
+  .hero {
+    min-height: 500px; /* Adjust height for tablet */
+    padding: 30px 15px;
+
+    &__title {
+      max-width: 400px; /* Reduce max-width for tablet */
+      @include typography($font-secondary, $color-white, 800, 44px, 100%);
+    }
+
+    &__description {
+      max-width: 400px;
+      @include typography($font-tertiary, $color-white, 700, 16px, 163%);
+    }
+
+    &__email {
+      gap: 15px;
+
+      &-input {
+        width: 300px;
+        height: 52px;
+        padding: 15px;
+        @include typography($font-secondary, #bbc8d4, 600, 15px, 176%);
+      }
+
+      &-button {
+        width: 150px;
+        height: 52px;
+        @include typography($font-secondary, $color-white, 700, 15px, 22px);
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .hero {
     margin-top: 24px;
+    min-height: 450px; /* Adjust height for mobile */
+    padding: 20px 10px;
+
     &__title {
-      width: 284px;
-      height: 200px;
+      max-width: 284px; /* Use max-width instead of fixed width */
       @include typography($font-secondary, $color-white, 800, 40px, 100%);
+
       .desktop-break {
         display: none;
       }
@@ -266,11 +315,11 @@ header {
     }
 
     &__description {
-      width: 314px;
-      height: 62px;
+      max-width: 314px; /* Use max-width instead of fixed width */
       @include typography($font-secondary, $color-white, 700, 16px, 163%);
       letter-spacing: 0%;
       text-align: center;
+
       .desktop-desc {
         display: none;
       }
@@ -286,36 +335,31 @@ header {
     }
 
     &__email {
-      width: 302px;
-      height: 115.95px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 10px;
 
       &-input {
-        width: 302px;
+        width: 100%; /* Use 100% width to fit container */
+        max-width: 302px;
         height: 52.85px;
         border: 1.89px solid #bbc8d4;
         border-radius: 3.77px;
+        padding: 15px;
         @include typography($font-secondary, #bbc8d4, 600, 15.1px, 176%);
       }
 
       &-button {
         border-radius: 3.77px;
-        @include typography(
-          $font-secondary,
-          $color-white,
-          700,
-          15.1px,
-          22.65px
-        );
+        @include typography($font-secondary, $color-white, 700, 15.1px, 22.65px);
         width: 165px;
         height: 56px;
+        margin-bottom: 61.15px;
       }
     }
   }
 }
-
 /*********************************** ABOUT *****************************************/
 .about {
   position: relative;
@@ -1489,7 +1533,6 @@ header {
   background-color: $color-primary; /* Pinkish-red background */
   padding: 63px 0;
   margin-top: 133px;
-  height: 396px;
 
   &__container {
     @include flex-center();
@@ -1543,7 +1586,8 @@ header {
 /* Media Queries for Responsive Design */
 @media screen and (max-width: $tablet) {
   .work-with-us {
-    padding: 60px 0;
+    padding-top: 63px;
+    padding-bottom: 64px;
 
     &__container {
       padding: 0 15px;
