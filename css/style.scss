@@ -340,7 +340,7 @@ header {
 
   &__underline {
     width: 156px;
-    height: 2px;
+    border: 2px solid #F64C72;
     background-color: $color-primary;
     margin: 0 auto 40px;
   }
@@ -750,7 +750,7 @@ header {
 
   &__underline {
     width: 169px;
-    height: 2px;
+    border: 3px solid #F64C72;
     background-color: $color-primary;
     margin-bottom: 78px;
   }
@@ -1037,6 +1037,201 @@ header {
   .mission__button {
     font-size: 20px;
     padding: 14px 28px;
+  }
+}
+
+/****************************** MEET OUR TEAM *************************************/
+.team {
+  width: 100%;
+  padding: 0;
+  margin-top: 150px;
+  background-color: $color-white;
+
+  &__container {
+    @include flex-center();
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__title {
+    @include typography($font-secondary, $color-primary-dark, 400, 48px, 100%);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__underline {
+    width: 169px;
+    background-color: $color-primary;
+    margin-bottom: 93px;
+    border: 3px solid $color-primary
+  }
+
+  &__items-wrapper {
+    width: 110%;
+    overflow-x: auto; /* Enable horizontal scrollbar */
+    overflow-y: hidden; /* Prevent vertical scrollbar */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    margin-bottom: 20px; /* Space before the Next button */
+  }
+
+  &__items {
+    display: flex;
+    gap: 30px; /* Space between cards */
+    width: max-content; /* Ensure the items don't wrap and create a horizontal scroll */
+  }
+
+  &__item {
+    background-color: $color-white;
+    width: 337px; /* Fixed width for desktop */
+    height: 468px;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0px 10px 15px 0px #655A5A40;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 248px; /* Fixed height for the image */
+    margin-bottom: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the area */
+    }
+  }
+
+  &__name {
+    @include typography($font-secondary, $color-primary-dark, 600, 24px, 100%);
+    text-align: left;
+    margin: 28px auto 5px 20px;
+  }
+  
+  &__role {
+    @include typography($font-secondary, $color-gray-400, 600, 14px, 151%);
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  &__description {
+    @include typography($font-tertiary, $color-gray-400, 400, 16px, 163%);
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  &__next-button {
+    @include typography($font-tertiary, $color-primary-dark, 600, 21.78px, 37.33px);
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end; /* Align to the right */
+    margin-top: 10px;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: $tablet) {
+  .team {
+
+    &__container {
+      padding: 0 15px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__underline {
+      width: 120px;
+      margin-bottom: 93px;
+    }
+
+    &__items-wrapper {
+      margin-bottom: 63px;
+      padding-left: 49px;
+    }
+
+    &__items {
+      gap: 30px;
+     
+    }
+
+    &__item {
+      width: 337px; /* Fixed width for desktop */
+      height: 468px;
+    }
+
+    &__image {
+      height: 248px;
+    }
+
+    &__next-button {
+      font-size: 21.78px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .team {
+    padding: 0;
+    margin-top: 88px;
+
+    &__container {
+      padding: 0 ;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__underline {
+      width: 135.44px;
+      margin-bottom: 46.96px;
+      border: 2.4px solid #F64C72
+    }
+
+    &__items-wrapper {
+      overflow-x: hidden; /* Disable horizontal scrollbar on mobile */
+      margin-bottom: 0; /* No need for extra margin since there's no Next button */
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+
+    &__items {
+      flex-direction: column; /* Stack items vertically on mobile */
+      width: 100%; /* Take full width */
+      gap: 40px; /* Space between stacked items */
+    }
+
+    &__item {
+      width: 100%; /* Full width on mobile */
+      height: 311px;
+    }
+
+    &__image {
+      height: 164.60px;
+    }
+
+    &__name {
+      font-size: 15.95px;
+    }
+
+    &__role {
+      font-size: 9.3px;
+    }
+
+    &__description {
+      font-size: 10.63px;
+    }
+
+    &__next-button {
+      display: none; /* Hide the Next button on mobile */
+    }
   }
 }
 //   .mission-section {

@@ -304,7 +304,7 @@ header nav .hamburger {
 }
 .about__underline {
   width: 156px;
-  height: 2px;
+  border: 2px solid #F64C72;
   background-color: #f64c72;
   margin: 0 auto 40px;
 }
@@ -687,7 +687,7 @@ header nav .hamburger {
 }
 .what-we-do__underline {
   width: 169px;
-  height: 2px;
+  border: 3px solid #F64C72;
   background-color: #f64c72;
   margin-bottom: 78px;
 }
@@ -942,5 +942,189 @@ header nav .hamburger {
   .mission__button {
     font-size: 20px;
     padding: 14px 28px;
+  }
+}
+/****************************** MEET OUR TEAM *************************************/
+.team {
+  width: 100%;
+  padding: 0;
+  margin-top: 150px;
+  background-color: #fff;
+}
+.team__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.team__title {
+  font-family: Mulish, sans-serif;
+  color: #553d67;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.team__underline {
+  width: 169px;
+  background-color: #f64c72;
+  margin-bottom: 93px;
+  border: 3px solid #f64c72;
+}
+.team__items-wrapper {
+  width: 110%;
+  overflow-x: auto; /* Enable horizontal scrollbar */
+  overflow-y: hidden; /* Prevent vertical scrollbar */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  margin-bottom: 20px; /* Space before the Next button */
+}
+.team__items {
+  display: flex;
+  gap: 30px; /* Space between cards */
+  width: -moz-max-content;
+  width: max-content; /* Ensure the items don't wrap and create a horizontal scroll */
+}
+.team__item {
+  background-color: #fff;
+  width: 337px; /* Fixed width for desktop */
+  height: 468px;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0px 10px 15px 0px rgba(101, 90, 90, 0.2509803922);
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.team__image {
+  width: 100%;
+  height: 248px; /* Fixed height for the image */
+  margin-bottom: 15px;
+}
+.team__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensure the image covers the area */
+}
+.team__name {
+  font-family: Mulish, sans-serif;
+  color: #553d67;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: left;
+  margin: 28px auto 5px 20px;
+}
+.team__role {
+  font-family: Mulish, sans-serif;
+  color: rgba(73, 92, 118, 0.6980392157);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 151%;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 20px;
+}
+.team__description {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(73, 92, 118, 0.6980392157);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 163%;
+  margin-left: 20px;
+  text-align: left;
+}
+.team__next-button {
+  font-family: "Open Sans", sans-serif;
+  color: #553d67;
+  font-weight: 600;
+  font-size: 21.78px;
+  line-height: 37.33px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end; /* Align to the right */
+  margin-top: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .team__container {
+    padding: 0 15px;
+  }
+  .team__title {
+    font-size: 36px;
+  }
+  .team__underline {
+    width: 120px;
+    margin-bottom: 93px;
+  }
+  .team__items-wrapper {
+    margin-bottom: 63px;
+    padding-left: 49px;
+  }
+  .team__items {
+    gap: 30px;
+  }
+  .team__item {
+    width: 337px; /* Fixed width for desktop */
+    height: 468px;
+  }
+  .team__image {
+    height: 248px;
+  }
+  .team__next-button {
+    font-size: 21.78px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team {
+    padding: 0;
+    margin-top: 88px;
+  }
+  .team__container {
+    padding: 0;
+  }
+  .team__title {
+    font-size: 30px;
+  }
+  .team__underline {
+    width: 135.44px;
+    margin-bottom: 46.96px;
+    border: 2.4px solid #F64C72;
+  }
+  .team__items-wrapper {
+    overflow-x: hidden; /* Disable horizontal scrollbar on mobile */
+    margin-bottom: 0; /* No need for extra margin since there's no Next button */
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  .team__items {
+    flex-direction: column; /* Stack items vertically on mobile */
+    width: 100%; /* Take full width */
+    gap: 40px; /* Space between stacked items */
+  }
+  .team__item {
+    width: 100%; /* Full width on mobile */
+    height: 311px;
+  }
+  .team__image {
+    height: 164.6px;
+  }
+  .team__name {
+    font-size: 15.95px;
+  }
+  .team__role {
+    font-size: 9.3px;
+  }
+  .team__description {
+    font-size: 10.63px;
+  }
+  .team__next-button {
+    display: none; /* Hide the Next button on mobile */
   }
 }/*# sourceMappingURL=style.css.map */
