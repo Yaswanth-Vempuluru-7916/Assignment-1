@@ -976,7 +976,7 @@ header nav .hamburger {
   border: 3px solid #f64c72;
 }
 .team__items-wrapper {
-  width: 110%;
+  width: 100%;
   overflow-x: auto; /* Enable horizontal scrollbar */
   overflow-y: hidden; /* Prevent vertical scrollbar */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
@@ -1161,7 +1161,7 @@ header nav .hamburger {
   border: 3px solid #f64c72;
 }
 .testimonial__items-wrapper {
-  width: 110%;
+  width: 100%;
   overflow-x: auto; /* Enable horizontal scrollbar */
   overflow-y: hidden; /* Prevent vertical scrollbar */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
@@ -1340,5 +1340,111 @@ header nav .hamburger {
   }
   .testimonial__role {
     font-size: 11.75px;
+  }
+}
+/****************************** WANT TO WORK WITH US *************************************/
+.work-with-us {
+  width: 100%;
+  background-color: #f64c72; /* Pinkish-red background */
+  padding: 63px 0;
+  margin-top: 133px;
+  height: 396px;
+}
+.work-with-us__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.work-with-us__title {
+  font-family: Mulish, sans-serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+.work-with-us__description {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 163%;
+  max-width: 800px;
+  margin-bottom: 36px;
+}
+.work-with-us__email {
+  color: #fff;
+  text-decoration: none;
+}
+.work-with-us__form {
+  width: 267px;
+  height: 48px;
+  max-width: 400px;
+}
+.work-with-us__input {
+  width: 100%;
+  padding: 10px 200px 9px 16px;
+  border: 2px solid #BBC8D4;
+  border-radius: 2px;
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 176%;
+  outline: none;
+}
+.work-with-us__input::-moz-placeholder {
+  color: #bbc8d4;
+  opacity: 0.7;
+}
+.work-with-us__input::placeholder {
+  color: #bbc8d4;
+  opacity: 0.7;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .work-with-us {
+    padding: 60px 0;
+  }
+  .work-with-us__container {
+    padding: 0 15px;
+  }
+  .work-with-us__title {
+    margin-bottom: 31px;
+  }
+  .work-with-us__description {
+    margin-bottom: 31px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .work-with-us {
+    padding-top: 95px;
+    padding-bottom: 86px;
+    height: 532px;
+  }
+  .work-with-us__container {
+    padding: 0 10px;
+  }
+  .work-with-us__title {
+    font-size: 36.49px;
+    margin-bottom: 31px;
+  }
+  .work-with-us__description {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .work-with-us__form {
+    max-width: 300px;
+  }
+  .work-with-us__input {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
