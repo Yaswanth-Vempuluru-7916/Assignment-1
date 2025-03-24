@@ -370,7 +370,7 @@ header nav .hamburger {
   font-size: 18px;
   line-height: 163%;
   margin-bottom: 20px;
-  max-width: 700px; /* Adjusted to match the width of the text in the first image */
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -378,11 +378,11 @@ header nav .hamburger {
   display: none; /* Hide mobile breaks by default */
 }
 .about__description .desktop-break {
-  display: block; /* Show desktop breaks by default */
-  margin-bottom: 10px; /* Consistent spacing between lines */
+  display: block;
+  margin-bottom: 10px;
 }
 .about__description .desktop-break:last-child {
-  margin-bottom: 0; /* No extra margin for the last line */
+  margin-bottom: 0;
 }
 .about__values {
   display: flex;
@@ -515,7 +515,7 @@ header nav .hamburger {
     margin-bottom: 20px;
   }
   .feature-card:last-child {
-    margin-bottom: -60px; /* Only the last card overlaps with achievements */
+    margin-bottom: -60px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -751,7 +751,7 @@ header nav .hamburger {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
-  max-width: 100%; /*something fishy*/
+  max-width: 100%;
 }
 .what-we-do__item {
   background-color: #fff;
@@ -803,7 +803,7 @@ header nav .hamburger {
     margin-bottom: 70px;
   }
   .what-we-do__items {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   .what-we-do__item {
@@ -1063,7 +1063,7 @@ header nav .hamburger {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Ensure the image covers the area */
+     object-fit: cover;
 }
 .team__name {
   font-family: Mulish, sans-serif;
@@ -1325,7 +1325,7 @@ header nav .hamburger {
     gap: 29px;
   }
   .testimonial__item {
-    width: 367px; /* Fixed width for tablet */
+    width: 367px;
     height: 444px;
   }
   .testimonial__rating img {
@@ -1362,7 +1362,7 @@ header nav .hamburger {
     border: 3px solid #f64c72;
   }
   .testimonial__items-wrapper {
-    overflow-x: hidden; /* Disable horizontal scrollbar on mobile */
+    overflow-x: hidden;
     margin-bottom: 31.85;
     padding-left: 26px;
     padding-right: 10px;
@@ -1400,7 +1400,7 @@ header nav .hamburger {
 /****************************** WANT TO WORK WITH US *************************************/
 .work-with-us {
   width: 100%;
-  background-color: #f64c72; /* Pinkish-red background */
+  background-color: #f64c72;
   padding: 63px 0;
   margin-top: 133px;
 }
