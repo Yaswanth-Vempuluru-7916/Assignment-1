@@ -174,19 +174,19 @@ header {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 583px; /* Use min-height instead of fixed height */
+  min-height: 583px; 
   background: url("../assets/images/hero_img.webp") no-repeat center center/cover;
   @include flex-center();
   text-align: center;
   color: white;
   flex-direction: column;
-  padding: 40px 20px; /* Add padding to prevent content from touching edges */
-  box-sizing: border-box; /* Ensure padding is included in width calculations */
+  padding: 40px 20px; 
+  box-sizing: border-box; 
 
   &__title {
-    max-width: 563px; /* Use max-width instead of fixed width */
+    max-width: 563px; 
     @include typography($font-secondary, $color-white, 800, 48px, 100%);
-    margin: 0 auto; /* Center the title */
+    margin: 0 auto; 
 
     .mobile-break {
       display: none;
@@ -203,7 +203,7 @@ header {
   }
 
   &__description {
-    max-width: 563px; /* Use max-width instead of fixed width */
+    max-width: 563px; 
     @include typography($font-tertiary, $color-white, 700, 18px, 163%);
     margin-top: 15px;
     margin-left: auto;
@@ -239,7 +239,7 @@ header {
       border-radius: 2px;
       padding: 20px;
       @include typography($font-secondary, #bbc8d4, 600, 16px, 176%);
-      box-sizing: border-box; /* Ensure padding is included in width */
+      box-sizing: border-box; 
     }
 
     &-button {
@@ -315,7 +315,7 @@ header {
     }
 
     &__description {
-      max-width: 314px; /* Use max-width instead of fixed width */
+      max-width: 314px; 
       @include typography($font-secondary, $color-white, 700, 16px, 163%);
       letter-spacing: 0%;
       text-align: center;
@@ -341,7 +341,7 @@ header {
       gap: 10px;
 
       &-input {
-        width: 100%; /* Use 100% width to fit container */
+        width: 100%; 
         max-width: 302px;
         height: 52.85px;
         border: 1.89px solid #bbc8d4;
@@ -396,7 +396,7 @@ header {
     margin-right: auto;
 
     .mobile-break {
-      display: none; /* Hide mobile breaks by default */
+      display: none; 
     }
 
     .desktop-break {
@@ -573,15 +573,15 @@ header {
       margin-right: 15px;
 
       .desktop-break {
-        display: none; /* Hide desktop breaks on mobile */
+        display: none; 
       }
 
       .mobile-break {
-        display: block; /* Show mobile breaks on mobile */
-        margin-bottom: 8px; /* Slightly less spacing for mobile */
+        display: block; 
+        margin-bottom: 8px; 
 
         &:last-child {
-          margin-bottom: 0; /* No extra margin for the last line */
+          margin-bottom: 0; 
         }
       }
     }
@@ -774,7 +774,6 @@ header {
 .what-we-do {
   width: 100%;
   padding: 78px 0;
-  // height: 1221px;
   background-color: $color-white;
 
   &__container {
@@ -930,11 +929,11 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     @include flex-center;
-    flex-direction: column; // Stack vertically on mobile
+    flex-direction: column; 
   }
 
   &__image {
-    display: none; // Hidden on mobile and tablet
+    display: none; 
   }
 
   &__content {
@@ -953,11 +952,11 @@ header {
     @include typography($font-secondary, $color-white, 600, 16px, 163%);
 
     .desktop-break {
-      display: none; // Hide desktop breaks on mobile
+      display: none; 
     }
 
     .mobile-break {
-      display: inline; // Show mobile breaks
+      display: inline; 
     }
 
     &:nth-of-type(1) {
@@ -987,7 +986,7 @@ header {
   }
 
   .mission__container {
-    flex-direction: column; // Still stacked on tablet
+    flex-direction: column; 
   }
 
   .mission__title {
@@ -1048,7 +1047,6 @@ header {
   .mission__content {
     flex: 1;
     max-width: 45%;
-    // text-align: left;
     height: 670px;
     padding-left: 83px;
     padding-right: 93px;
@@ -1201,7 +1199,7 @@ header {
     }
 
     &__item {
-      width: 337px; /* Fixed width for desktop */
+      width: 337px; 
       height: 468px;
     }
 
@@ -1236,7 +1234,7 @@ header {
 
     &__items-wrapper {
       overflow-x: hidden; /* Disable horizontal scrollbar on mobile */
-      margin-bottom: 0; /* No need for extra margin since there's no Next button */
+      margin-bottom: 0; 
       padding-left: 65px;
       padding-right: 65px;
     }
@@ -1309,13 +1307,13 @@ header {
     overflow-x: auto; /* Enable horizontal scrollbar */
     overflow-y: hidden; /* Prevent vertical scrollbar */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-    margin-bottom: 60px; /* Space before the navigation buttons */
+    margin-bottom: 60px; 
   }
 
   &__items {
     display: flex;
-    gap: 29px; /* Space between cards */
-    width: max-content; /* Ensure the items don't wrap and create a horizontal scroll */
+    gap: 29px; 
+    width: max-content; 
   }
 
   &__item {
@@ -1345,7 +1343,7 @@ header {
   &__description {
     @include typography($font-tertiary, $color-gray-400, 400, 16px, 163%);
     margin-bottom: 49.69px;
-    flex-grow: 1; /* Allow description to take remaining space */
+    flex-grow: 1; 
   }
 
   &__author {
